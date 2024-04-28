@@ -1,5 +1,3 @@
-package LinkedList;
-
 public class LinkedListEx {
     Node head;
     Node tail;

@@ -102,7 +102,7 @@ public int findNodevalue(int index){
         return tail.data;
     }
     Node node=head;
-    for(int i=1;i<index;i++){
+    for(int i=1;i<=index;i++){
         node=node.next;
     }
     return node.data;
@@ -115,4 +115,30 @@ public void displayLL(){
     }
     System.out.println("End");
 }
+    public static void main(String[] args){
+         LinkedListEx ll=new LinkedListEx();
+         ll.insertAtFirst(2);
+         ll.insertAtLast(1);
+         ll.insertAtLast(0);
+         ll.insertAtLast(6);
+         ll.insertAtLast(8);
+         ll.insertAtLast(4);
+         ll.insertAtLast(6);
+         ll.displayLL();
+          ll.insertAtLast(42);
+          ll.insertAtMiddle(23,3);
+          ll.displayLL();
+          System.out.println("Deleted Node is:"+ll.deleteAtFirst());
+          System.out.print("New Linked List is:");
+          ll.displayLL();
+          System.out.println("We deleted the last node of the list:"+ll.deleteAtLast());
+          System.out.print("New Linked List is:");
+          ll.displayLL();
+          System.out.println("New Size of the Linked List is:"+ll.getsize());
+          System.out.println("Node that to be deleted is: "+ll.deleteAtMiddle(3));
+          System.out.print("New Linked List is:");
+          ll.displayLL();
+          System.out.println("The value of node with index 3 is:"+ll.findNodevalue(3));
+          ll.displayLL();
+    }
 }
